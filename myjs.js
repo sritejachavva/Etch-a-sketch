@@ -12,23 +12,23 @@ function createDivs()
 
     let emptyCell = document.createElement('div');
     emptyCell.classList.add('cell');
-    emptyCell.style.cssText = 'background-color:black; width:25px; height: 25px; border-style: solid; opacity:0.0;'
+    emptyCell.style.cssText = 'background-color:black; width:0.1px; height: 0.1px; border-style: solid; opacity:0.0;'
 
 
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < 64; i++) {
         let temprow = emptyRow.cloneNode(true);
         document.body.appendChild(temprow);
-        for (let j = 0; j < 16; j++){
+        for (let j = 0; j < 64; j++){
             let tempcell = emptyCell.cloneNode(true);
             
             function increaseDarkness(tempCell){
                 let cellOpacity = parseFloat(tempcell.style.getPropertyValue("opacity"));
-                return cellOpacity + 0.1;
+                return cellOpacity + 0.3;
             }
             function fillCell(){
                 newOpacity= increaseDarkness(tempcell);
                 console.log("test");
-                tempcell.style.cssText = `width:25px; height: 25px; border-style: solid; background-color:black; opacity:${newOpacity}`
+                tempcell.style.cssText = `width:0.1px; height: 0.1px; border-style: solid; background-color:black; opacity:${newOpacity}`
             }
 
             tempcell.addEventListener('mouseover', fillCell)
