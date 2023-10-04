@@ -6,6 +6,8 @@ function createDivs()
 {
     let emptyGrid = document.createElement('div');
     emptyGrid.classList.add('container');
+    emptyGrid.style.cssText = 'border-style: solid; border-radius:10px; width:fit-content;'
+    document.body.appendChild(emptyGrid);
     let emptyRow = document.createElement('div');
     emptyRow.classList.add('row');
     emptyRow.style.cssText = 'display:flex;'
@@ -17,7 +19,7 @@ function createDivs()
 
     for (let i = 0; i < 64; i++) {
         let temprow = emptyRow.cloneNode(true);
-        document.body.appendChild(temprow);
+        emptyGrid.appendChild(temprow);
         for (let j = 0; j < 64; j++){
             let tempcell = emptyCell.cloneNode(true);
             
