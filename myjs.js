@@ -16,7 +16,6 @@ function selectMode(){
     rainbowButton.addEventListener('click',toggleOnOff);
 
     rainbowButton.classList.add('button-clicked');
-    
 }
 
 function createDivs()
