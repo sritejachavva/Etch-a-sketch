@@ -1,0 +1,22 @@
+.rainbow-mode{
+    display:flex;
+}
+
+.temp_button{
+    
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    
+}
+.temp_button:hover{
+    transition: 0.1s;
+    border-style: none;
+
+}
+.temp_button:active {
+    vertical-align: top;
+
+
+
+}
