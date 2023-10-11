@@ -32,6 +32,7 @@ function createDivs()
     let emptyGrid = document.createElement('div');
     emptyGrid.classList.add('container');
     emptyGrid.style.cssText = 'border-style: solid; border-radius:10px; width:fit-content;'
+
     document.body.appendChild(emptyGrid);
     let emptyRow = document.createElement('div');
     emptyRow.classList.add('row');
@@ -39,7 +40,9 @@ function createDivs()
 
     let emptyCell = document.createElement('div');
     emptyCell.classList.add('cell');
-    emptyCell.style.cssText = 'background-color:black; width:0.1px; height: 0.1px; border-style: solid; opacity:0.0;'
+    //emptyCell.style.cssText = 'width:1px; height: 1px; border-style: solid; opacity:0.0;'
+    emptyCell.style.cssText = 'width:10px; height: 10px;  opacity:0.0;'
+
 
     selectMode();
     
@@ -60,12 +63,16 @@ function createDivs()
                 console.log(`${colorMode}`);
                 if (colorMode == 'normal'){
                     //tempcell.style.backgroundColor = 'black';
-                    tempcell.style.cssText = `width:0.1px; height: 0.1px; border-style: solid;background-color:black; opacity:${newOpacity}`
+                    //tempcell.style.cssText = `width:1px; height: 1px; border-style: solid;background-color:black; opacity:${newOpacity}`
+                    tempcell.style.cssText = `width:10px; height: 10px;background-color:black; opacity:${newOpacity}`
+
                 } else if (colorMode == 'rainbow'){
-                    const randomR = Math.floor(Math.random() * 256);
-                    const randomG = Math.floor(Math.random() * 256);
-                    const randomB = Math.floor(Math.random() * 256);
-                    tempcell.style.cssText = `width:0.1px; height: 0.1px; border-style: solid; opacity:${newOpacity}; background-color: rgb(${randomR}, ${randomG}, ${randomB})`
+                    let randomR = Math.floor(Math.random() * 256);
+                    let randomG = Math.floor(Math.random() * 256);
+                    let randomB = Math.floor(Math.random() * 256);
+                    //tempcell.style.cssText = `width:1px; height: 1px; border-style: solid; opacity:${newOpacity}; background-color: rgb(${randomR}, ${randomG}, ${randomB}) !important;`
+                    tempcell.style.cssText = `width:10px; height: 10px; opacity:${newOpacity}; background-color: rgb(${randomR}, ${randomG}, ${randomB}) !important;`
+
                     //tempcell.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
 
                 }
