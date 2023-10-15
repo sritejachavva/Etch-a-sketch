@@ -41,7 +41,7 @@ function createDivs()
     let emptyCell = document.createElement('div');
     emptyCell.classList.add('cell');
     //emptyCell.style.cssText = 'width:1px; height: 1px; border-style: solid; opacity:0.0;'
-    emptyCell.style.cssText = 'width:10px; height: 10px;  opacity:0.0;'
+    emptyCell.style.cssText = 'width:5px; height: 5px;  opacity:0.0;'
 
 
     selectMode();
@@ -64,14 +64,14 @@ function createDivs()
                 if (colorMode == 'normal'){
                     //tempcell.style.backgroundColor = 'black';
                     //tempcell.style.cssText = `width:1px; height: 1px; border-style: solid;background-color:black; opacity:${newOpacity}`
-                    tempcell.style.cssText = `width:10px; height: 10px;background-color:black; opacity:${newOpacity}`
+                    tempcell.style.cssText = `width:5px; height: 5px;background-color:black; opacity:${newOpacity}`
 
                 } else if (colorMode == 'rainbow'){
                     let randomR = Math.floor(Math.random() * 256);
                     let randomG = Math.floor(Math.random() * 256);
                     let randomB = Math.floor(Math.random() * 256);
                     //tempcell.style.cssText = `width:1px; height: 1px; border-style: solid; opacity:${newOpacity}; background-color: rgb(${randomR}, ${randomG}, ${randomB}) !important;`
-                    tempcell.style.cssText = `width:10px; height: 10px; opacity:${newOpacity}; background-color: rgb(${randomR}, ${randomG}, ${randomB}) !important;`
+                    tempcell.style.cssText = `width:5px; height: 5px; opacity:${newOpacity}; background-color: rgb(${randomR}, ${randomG}, ${randomB}) !important;`
 
                     //tempcell.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
 
